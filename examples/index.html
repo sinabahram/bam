@@ -3,14 +3,21 @@
 <meta charset="UTF-8">
 <meta name="description" content="Building Accessible Math Example">
 
-    
+<title>Test of Bam!</title>
 <style>
 img {
 display: block;
 }
 </style>
-<link
-<title>Test of Bam!</title>
+<script src="assets/js/jquery.min.js"></script>
+<script>
+function test() {
+    $.get("https://mathmlcloud.org/equation/56f1b9efc4c5565c0a205a14", function(data, status) {
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+}
+test();
+</script>
 </head>
 <body>
 <h1>Welcome to the BAM Test!</h1>
