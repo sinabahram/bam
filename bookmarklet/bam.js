@@ -25,7 +25,8 @@ for(var i=0; i<imgs.length; i++) {
 	var bamID = img.dataset.bamId; // data-bam-id gets converted to bamId supposedly
 
 	var tmpButton = document.createElement('button');
-	tmpButton.innerHTML = img.innerHTML;
+	tmpButton.innerHTML = img.outerHTML;
+	alert("tmpButton = "+JSON.stringify(tmpButton));
 	var imgNode = tmpButton.firstChild;
 	alert("imgNode = "+imgNode);
 	imgNode.setAttribute('display' ,'block');
