@@ -10,7 +10,7 @@ component type identifiers)
 * Methodology of generating globally unique IDs
 * List of component types
 	** ascii
-    ** Unicode mathematics
+    ** Unicode mathematics [Unicode technical note #28](http://unicode.org/notes/tn28/)
 	** audio
 	** braille
 	** latex
