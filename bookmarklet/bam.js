@@ -17,7 +17,7 @@ for(var i=0; i<imgs.length; i++) {
 	alert('checking image: '+i);
 	alert("image's dataset:"+JSON.stringify(img.dataset));
 
-	if(!('bam-id' in img.dataset)) {
+	if(!('bamId' in img.dataset)) {
 		continue;
 	}
 
