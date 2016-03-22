@@ -15,6 +15,8 @@ var imgs = document.images;
 for(var i=0; i<imgs.length; i++) {
 	var img = imgs[i];
 	alert('checking image: '+i);
+	alert('image's dataset: '+img.dataset);
+
 	if(!('bam-id' in img.dataset)) {
 		continue;
 	}
