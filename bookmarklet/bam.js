@@ -29,5 +29,6 @@ for(var i=0; i<imgs.length; i++) {
 	imgNode.setAttribute('display' ,'block');
 	img.parentNode.insertBefore(imgNode, img.nextSibling);
 }
+}
 
 (function() { replaceImagesWithBAMButtons();})();
