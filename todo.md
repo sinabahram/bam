@@ -5,14 +5,18 @@
 	** requestID: Requesting a cononical bundle ID
 	** component: Retrieving any bundle component given a bundle ID
 	** availableComponents: Retrieiving what components are available, given a bundle ID
-	** bundle: Retrieving any bundle component(s), as a bundle, given a bundle ID
+	** Component types: list component types supported by the server (returns list of
+component type identifiers)
 * Methodology of generating globally unique IDs
 * List of component types
 	** ascii
+    ** Unicode mathematics
 	** audio
 	** braille
 	** latex
-	** image // with format modifier?
+    ** MathML
+    ** OpenMath?
+	** image // with format modifier (media type)?
 		*** bmp
 		*** jpg
 		*** png
