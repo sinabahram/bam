@@ -26,11 +26,12 @@ for(var i=0; i<imgs.length; i++) {
 
 	var tmpButton = document.createElement('button');
 	tmpButton.innerHTML = img.outerHTML;
-	alert("tmpButton = "+JSON.stringify(tmpButton));
-	var imgNode = tmpButton.firstChild;
-	alert("imgNode = "+imgNode);
-	imgNode.setAttribute('display' ,'block');
-	img.parentNode.insertBefore(imgNode, img.nextSibling);
+	alert("tmpButton = "+tmpButton.outerHTML);
+img.parentNode.insertBefore(tmpButton, img);
+img.parentNode.removeChild(img);
+
+//	var imgNode = tmpButton.firstChild;
+//	alert("imgNode = "+imgNode);
 }
 }
 
