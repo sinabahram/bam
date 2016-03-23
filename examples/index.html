@@ -13,15 +13,13 @@ img {
 display: block;
 }
 </style>
-<script src="assets/js/jquery.min.js"></script>
-<script>
-function test() {
-    $.get("https://mathmlcloud.org/equation/56f1b9efc4c5565c0a205a14", function(data, status) {
-        alert("Data: " + data + "\nStatus: " + status);
-    });
-}
-test();
+<!-- 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="mmlc.js"></script>
 </head>
 <body>
 <h1>Welcome to the BAM Test!</h1>
@@ -39,13 +37,18 @@ BAM Bookmarklet
 
 <h2>Example 1 with Image</h2>
 <p>
-Below is an equation.
-<img data-bam-id="5488dbf432d2e2e1286d580b" src="1.png" alt="a dot b plus 1" />
+Below is an equation.<br>
+<!-- remove the button below, since it will be created by the bookmarklet -->
+<button onclick="getAltFormat('56f1b9efc4c5565c0a205a14', 'mml')">to MathML</button>
+<img data-bam-id="56f1b9efc4c5565c0a205a14" src="1.png" alt="a dot b plus 1" />
     
 <h2>Example 2 with MathML</h2>
 <p>
-<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="a upper X plus b upper X squared equals c">
-  <mstyle displaystyle="true" data-bam-id="796DD89D-604D-4ED9-9ED7-A7BBDAA33F8C">
+<!-- remove the button below, since it will be created by the bookmarklet -->
+<button onclick="getAltFormat('56f1d560c4c5565c0a205ba3', 'png')">to png</button>
+<div data-bam-id="56f1d560c4c5565c0a205ba3">
+<math id='mml' xmlns="http://www.w3.org/1998/Math/MathML" alttext="a upper X plus b upper X squared equals c">
+  <mstyle displaystyle="true">
     <mi>a</mi>
     <mi>X</mi>
     <mo>+</mo>
@@ -57,7 +60,8 @@ Below is an equation.
     <mo>=</mo>
     <mi>c</mi>
   </mstyle>
-</math>        
+</math>
+</div>     
     
 </body>
 </html>
