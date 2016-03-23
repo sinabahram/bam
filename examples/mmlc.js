@@ -9,12 +9,14 @@ function getAltFormat(id, format_to_get) {
 					mml_e.setAttribute('id', id);
 					$('img[data-bam-id="' + id + '"]').after(mml_e);
 					MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+					$('img[data-bam-id="' + id + '"]').remove()
 				}
 				if (format_to_get == 'png') {
 					var img_e = document.createElement('div');  // Create with DOM
 					img_e.innerHTML = data.components[i].source;
 					img_e.setAttribute('id', id);
 					$('div[data-bam-id="' + id + '"]').after(img_e);
+					$('div[data-bam-id="' + id + '"]').remove();
 				}
 			}
 		}
